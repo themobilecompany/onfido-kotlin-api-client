@@ -1,9 +1,15 @@
 # org.openapitools.client - Kotlin client library for Onfido API
 
+## Gradle Dependency:
+```implementation 'kotlin-client:kotlin-onfido-client:0.0.1'```
+
+## Artifactory location:
+```http://212.204.244.152:8081/artifactory/webapp/#/artifacts/browse/tree/General/plugins-release-local/kotlin-client/kotlin-onfido-client/0.0.1/kotlin-onfido-client-0.0.1.jar```
+
 ## Requires
 
-* Kotlin 1.1.2
-* Gradle 3.3
+* Kotlin 1.3.11
+* Gradle 5.1
 
 ## Build
 
