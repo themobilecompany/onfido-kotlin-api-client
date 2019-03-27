@@ -107,10 +107,12 @@ class DefaultApi(basePath: kotlin.String = "https://api.onfido.com/v2") : ApiCli
     * @return Check
     */
     @Suppress("UNCHECKED_CAST")
-    fun createCheck(applicantId: kotlin.String, check: Check) : Check {
-        val localVariableBody: kotlin.Any? = check
-        val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf()
+    fun createCheck(applicantId: kotlin.String, check: Check,
+                    localVariableBody: kotlin.Any? = check,
+                    localVariableQuery: MultiValueMap = mapOf(),
+                    localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf()
+                    ) : Check {
+
         val localVariableConfig = RequestConfig(
             RequestMethod.POST,
             "/applicants/{applicant_id}/checks".replace("{"+"applicant_id"+"}", "$applicantId"),
@@ -331,10 +333,12 @@ class DefaultApi(basePath: kotlin.String = "https://api.onfido.com/v2") : ApiCli
     * @return Applicant
     */
     @Suppress("UNCHECKED_CAST")
-    fun findApplicant(applicantId: kotlin.String) : Applicant {
-        val localVariableBody: kotlin.Any? = null
-        val localVariableQuery: MultiValueMap = mapOf()
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf()
+    fun findApplicant(applicantId: kotlin.String,
+                      localVariableBody: kotlin.Any? = null,
+                      localVariableQuery: MultiValueMap = mapOf(),
+                      localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf()
+                      ) : Applicant {
+
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/applicants/{applicant_id}".replace("{"+"applicant_id"+"}", "$applicantId"),
@@ -626,10 +630,12 @@ class DefaultApi(basePath: kotlin.String = "https://api.onfido.com/v2") : ApiCli
     * @return ChecksList
     */
     @Suppress("UNCHECKED_CAST")
-    fun listChecks(applicantId: kotlin.String, page: kotlin.Int, perPage: kotlin.Int) : ChecksList {
-        val localVariableBody: kotlin.Any? = null
-        val localVariableQuery: MultiValueMap = mapOf("page" to listOf("$page"), "per_page" to listOf("$perPage"))
-        val localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf()
+    fun listChecks(applicantId: kotlin.String, page: kotlin.Int, perPage: kotlin.Int,
+                   localVariableBody: kotlin.Any? = null,
+                   localVariableQuery: MultiValueMap = mapOf("page" to listOf("$page"), "per_page" to listOf("$perPage")),
+                   localVariableHeaders: kotlin.collections.Map<kotlin.String,kotlin.String> = mapOf()
+                   ) : ChecksList {
+
         val localVariableConfig = RequestConfig(
             RequestMethod.GET,
             "/applicants/{applicant_id}/checks".replace("{"+"applicant_id"+"}", "$applicantId"),
